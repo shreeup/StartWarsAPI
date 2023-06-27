@@ -6,9 +6,10 @@ const filmsNext = document.getElementById("films-next");
 let URL_Films = "https://swapi.dev/api/films/?page=1";
 let nextFilms;
 let previousFilms;
-
-filmsPrevious.addEventListener("click", pagePreviousFilms);
-filmsNext.addEventListener("click", pageNextFilms);
+if(filmsPrevious){
+  filmsPrevious.addEventListener("click", pagePreviousFilms);
+  filmsNext.addEventListener("click", pageNextFilms);
+}
 
 // // Variables Starships
 // const starshipsPrevious = document.getElementById("starships-previous");
@@ -22,16 +23,19 @@ filmsNext.addEventListener("click", pageNextFilms);
 // starshipsNext.addEventListener("click", pageNextStarships);
 
 // Variables People
-const peoplePrevious = document.getElementById("people-previous");
-const peopleNext = document.getElementById("people-next");
+
+  const peoplePrevious = document.getElementById("people-previous");
+  const peopleNext = document.getElementById("people-next");
+
+
 
 let URL_People = "https://swapi.dev/api/people/?page=1";
 let nextPeople;
 let previousPeople;
-
-peoplePrevious.addEventListener("click", pagePreviousPeople);
-peopleNext.addEventListener("click", pageNextPeople);
-
+if(peoplePrevious){
+  peoplePrevious.addEventListener("click", pagePreviousPeople);
+  peopleNext.addEventListener("click", pageNextPeople);
+}
 
 // Functions Films
 async function fetchFilms() {

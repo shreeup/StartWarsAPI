@@ -38,7 +38,10 @@ body {
   .txt-shadow-blue {
     text-shadow: 1px 1px 1px blue;
   }
-  
+  .txt-link{
+    padding:1%;
+    text-decoration: none;
+  }
   button:hover {
     cursor: pointer;
   }
